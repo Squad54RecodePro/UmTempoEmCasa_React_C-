@@ -1,0 +1,36 @@
+﻿@model UmTempoEmCasa.Models.Anuncio
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container formulario">    
+    <h1>Detalhes</h1>
+    <h4>Anuncio</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Imovel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Imovel.Cep)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.inicio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.inicio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.valor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.valor)
+        </dd>
+    </dl>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.AnuncioID">Alterar</a> |
+        <a asp-action="Index">Voltar para a Lista</a>
+    </div>
+</div>
+

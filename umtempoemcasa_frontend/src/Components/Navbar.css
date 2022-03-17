@@ -1,0 +1,49 @@
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    padding-left: 70px;
+    font-size: 30px !important;
+}
+
+a {
+    color: #070707;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+li a:hover {
+    margin-top: -10px;
+}
+
+li a:hover:after {
+    transform: scaleY(3);
+    font-size: 30px;
+ }
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+.navbar-logo {
+    justify-self: start;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+

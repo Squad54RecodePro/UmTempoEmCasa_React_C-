@@ -11,7 +11,9 @@ function NavTeste() {
   return (
     <nav className="navbar navbar-expand-sm navbar-toggleable-sm navbar-light">
             <div className="container-fluid">
+                <Link to="Home" className='navbar-logo'>
                 <a className="navbar-brand" ><FontAwesomeIcon icon={faHouse}/>  UmTempoEmCasa</a>
+                </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -19,42 +21,38 @@ function NavTeste() {
                 <div className="navbar-collapse collapse d-sm-inline-flex justify-content-between ">
                     <ul className="navbar-nav flex-grow-1 justify-content-center">
                         <li className="nav-item">
-                            <Link to="/" className='navbar-logo'>
+                            <Link to="Home" className='navbar-logo'>
                             <a className="nav-link text-dark">Home</a>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/" className='navbar-logo'>
+                            <Link to="Contato" className='navbar-logo'>
                             <a className="nav-link text-dark">Contato</a>
                             </Link>
                         </li>
+                        
                         <li className="nav-item">  
-                        </li>
-                            <Link to="/" className='navbar-logo'>
+                            <Link to="Refugiado" className='navbar-logo'>
                             <a className="nav-link text-dark">Refugiado</a>
-                            </Link>                        
+                            </Link>  
+                        </li>                      
                         <li className="nav-item">
-                            <Link to="/" className='navbar-logo'>
-                            <a className="nav-link text-dark">Anfitrião</a>
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/" className='navbar-logo'>
+                            <Link to="/#" className='navbar-logo'>
                             <a className="nav-link text-dark">ONGS</a>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/" className='navbar-logo'>
+                            <Link to="/#" className='navbar-logo'>
                             <a className="nav-link text-dark">Imóvel</a>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/" className='navbar-logo'>
+                            <Link to="/#" className='navbar-logo'>
                             <a className="nav-link text-dark">Anúncio</a>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/" className='navbar-logo'>
+                            <Link to="/#" className='navbar-logo'>
                             <a className="nav-link text-dark">Reserva</a>
                             </Link>
                         </li>

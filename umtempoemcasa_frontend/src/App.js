@@ -12,13 +12,14 @@ import Contato from './Components/Pages/Contato';
 import Imovel from './Components/Pages/Imovel';
 import Refugiado from './Components/Pages/Refugiado';
 import Ongs from './Components/Pages/Ongs';
+import Footer from './Components/Footer';
 
 
 function App() {
   return (
     <div>
       <Router>
-        <Navbar />     
+        <Navbar />
         <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Anuncio' element={<Anuncio />} />
@@ -29,6 +30,7 @@ function App() {
         <Route path='/Ongs' element={<Ongs />} />
         <Route path='/Contato' element={<Contato />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

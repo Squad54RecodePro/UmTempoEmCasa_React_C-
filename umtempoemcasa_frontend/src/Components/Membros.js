@@ -24,21 +24,21 @@ function Membros() {
                                 nesciunt fuga incidunt saepe maiores praesentium mollitia!</p>
                             <div class="d-flex flex-row justify-content-center">
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-facebook">
 
                                         </i>
                                     </a>
                                 </div>
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-twitter">
 
                                         </i>
                                     </a>
                                 </div>
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-instagram">
 
                                         </i>
@@ -58,21 +58,21 @@ function Membros() {
                                 nesciunt fuga incidunt saepe maiores praesentium mollitia!</p>
                             <div class="d-flex flex-row justify-content-center">
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-facebook">
 
                                         </i>
                                     </a>
                                 </div>
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-twitter">
 
                                         </i>
                                     </a>
                                 </div>
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-instagram">
 
                                         </i>
@@ -93,21 +93,21 @@ function Membros() {
                                 nesciunt fuga incidunt saepe maiores praesentium mollitia!</p>
                             <div class="d-flex flex-row justify-content-center">
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-facebook">
 
                                         </i>
                                     </a>
                                 </div>
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-twitter">
 
                                         </i>
                                     </a>
                                 </div>
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-instagram">
 
                                         </i>
@@ -128,21 +128,21 @@ function Membros() {
                                 nesciunt fuga incidunt saepe maiores praesentium mollitia!</p>
                             <div class="d-flex flex-row justify-content-center">
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-facebook">
 
                                         </i>
                                     </a>
                                 </div>
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-twitter">
 
                                         </i>
                                     </a>
                                 </div>
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-instagram">
 
                                         </i>
@@ -163,21 +163,21 @@ function Membros() {
                                 nesciunt fuga incidunt saepe maiores praesentium mollitia!</p>
                             <div class="d-flex flex-row justify-content-center">
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-facebook">
 
                                         </i>
                                     </a>
                                 </div>
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-twitter">
 
                                         </i>
                                     </a>
                                 </div>
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-instagram">
 
                                         </i>
@@ -198,21 +198,21 @@ function Membros() {
                                 nesciunt fuga incidunt saepe maiores praesentium mollitia!</p>
                             <div class="d-flex flex-row justify-content-center">
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-facebook">
 
                                         </i>
                                     </a>
                                 </div>
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-twitter">
 
                                         </i>
                                     </a>
                                 </div>
                                 <div class="p-4">
-                                    <a href="#">
+                                    <a href="/#">
                                         <i class="fa fa-instagram">
 
                                         </i>

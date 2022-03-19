@@ -106,7 +106,7 @@ function Footer() {
 
 
             <div className="text-center p-3" >
-                &copy; 2021 - UmTempoEmCasa - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy </a>
+                &copy; 2021 - UmTempoEmCasa - <a href='./'>Privacy </a>
 
             </div>
 

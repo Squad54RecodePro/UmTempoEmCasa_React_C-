@@ -14,9 +14,7 @@ class formRefugiado extends Component {
         return (
             <div className='container formBody'>
                 <div className='textMenu'>
-                    <h1>Adicionar</h1>
-                    <hr />
-                    <h4>Refugiado</h4>
+                    <h1>Cadastre-se</h1>
                 </div>
                 <div className='container textForm'>
                     <div className='row'>
@@ -51,8 +49,10 @@ class formRefugiado extends Component {
                             <input type="password" className="form-control"></input>
                         </div>
                     </div>
+                    <div className='alignButtons'>
                     <button className='btn btn-success btnEnviar'>Enviar</button>
                     <button className='btn btn-danger btnCancelar' href="/">Cancelar</button>
+                    </div>
                 </div>
 
             </div>

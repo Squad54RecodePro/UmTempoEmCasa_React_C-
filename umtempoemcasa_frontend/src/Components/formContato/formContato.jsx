@@ -13,9 +13,7 @@ class formContato extends Component {
         return (
             <div className='container formBody'>
                 <div className='textMenu'>
-                    <h1>Adicionar</h1>
-                    <hr />
-                    <h4>Contato</h4>
+                    <h1>Entre em contato concosco</h1>
                 </div>
                 <div className='container textForm'>
                     <div className='row'>
@@ -33,8 +31,10 @@ class formContato extends Component {
                             <textarea type="text" className="form-control" style={{ height: '200px' }}></textarea>
                         </div>
                     </div>
+                    <div className='alignButtons'>
                     <button className='btn btn-success btnEnviar'>Enviar</button>
                     <button className='btn btn-danger btnCancelar' href="/">Cancelar</button>
+                    </div>
 
                 </div>
 

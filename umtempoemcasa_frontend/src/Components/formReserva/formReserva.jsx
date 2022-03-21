@@ -13,9 +13,7 @@ class formReserva extends Component {
         return (
             <div className='container formBody'>
                 <div className='textMenu'>
-                    <h1>Adicionar</h1>
-                    <hr />
-                    <h4>ONGs</h4>
+                    <h1>Faça sua reserva</h1>
                 </div>
                 <div className='container textForm'>
                     <div className='row'>
@@ -37,8 +35,10 @@ class formReserva extends Component {
             
                            </div>
                     </div>
+                    <div className='alignButtons'>
                     <button className='btn btn-success btnCadastrar'>Cadastrar</button>
                     <button className='btn btn-danger btnCancelar' href="/">Cancelar</button>
+                    </div>
 
                 </div>
 

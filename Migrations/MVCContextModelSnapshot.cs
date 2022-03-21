@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using UmTempoEmCasa.Context;
+using UmTempoEmCasaReactC.Context;
 
 #nullable disable
 
-namespace UmTempoEmCasa.Migrations
+namespace UmTempoEmCasaReactC.Migrations
 {
     [DbContext(typeof(MVCContext))]
     partial class MVCContextModelSnapshot : ModelSnapshot
@@ -17,12 +17,17 @@ namespace UmTempoEmCasa.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.1")
+                .HasAnnotation("ProductVersion", "6.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("UmTempoEmCasa.Models.Anfitriao", b =>
+            modelBuilder.Entity("Refugiado", b =>
+                {
+                    b.ToTable("Refugiados");
+                });
+
+            modelBuilder.Entity("UmTempoEmCasaReactC.Model.Anfitriao", b =>
                 {
                     b.Property<int>("AnfitriaoID")
                         .ValueGeneratedOnAdd()
@@ -85,7 +90,7 @@ namespace UmTempoEmCasa.Migrations
                     b.ToTable("Anfitrioes");
                 });
 
-            modelBuilder.Entity("UmTempoEmCasa.Models.Anuncio", b =>
+            modelBuilder.Entity("UmTempoEmCasaReactC.Model.Anuncio", b =>
                 {
                     b.Property<int>("AnuncioID")
                         .ValueGeneratedOnAdd()
@@ -114,7 +119,7 @@ namespace UmTempoEmCasa.Migrations
                     b.ToTable("Anuncios");
                 });
 
-            modelBuilder.Entity("UmTempoEmCasa.Models.Contato", b =>
+            modelBuilder.Entity("UmTempoEmCasaReactC.Model.Contato", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -146,7 +151,7 @@ namespace UmTempoEmCasa.Migrations
                     b.ToTable("Contatos");
                 });
 
-            modelBuilder.Entity("UmTempoEmCasa.Models.Imovel", b =>
+            modelBuilder.Entity("UmTempoEmCasaReactC.Model.Imovel", b =>
                 {
                     b.Property<int>("ImovelID")
                         .ValueGeneratedOnAdd()
@@ -179,7 +184,7 @@ namespace UmTempoEmCasa.Migrations
                     b.ToTable("Imoveis");
                 });
 
-            modelBuilder.Entity("UmTempoEmCasa.Models.Ongs", b =>
+            modelBuilder.Entity("UmTempoEmCasaReactC.Model.Ongs", b =>
                 {
                     b.Property<int>("OngsID")
                         .ValueGeneratedOnAdd()
@@ -217,7 +222,7 @@ namespace UmTempoEmCasa.Migrations
                     b.ToTable("Ongs");
                 });
 
-            modelBuilder.Entity("UmTempoEmCasa.Models.Refugiado", b =>
+            modelBuilder.Entity("UmTempoEmCasaReactC.Model.Refugiado", b =>
                 {
                     b.Property<int>("RefugiadoID")
                         .ValueGeneratedOnAdd()
@@ -265,10 +270,10 @@ namespace UmTempoEmCasa.Migrations
 
                     b.HasKey("RefugiadoID");
 
-                    b.ToTable("Refugiados");
+                    b.ToTable("Refugiado");
                 });
 
-            modelBuilder.Entity("UmTempoEmCasa.Models.Reserva", b =>
+            modelBuilder.Entity("UmTempoEmCasaReactC.Model.Reserva", b =>
                 {
                     b.Property<int>("ReservaID")
                         .ValueGeneratedOnAdd()
@@ -301,24 +306,24 @@ namespace UmTempoEmCasa.Migrations
                     b.ToTable("Reservas");
                 });
 
-            modelBuilder.Entity("UmTempoEmCasa.Models.Anuncio", b =>
+            modelBuilder.Entity("UmTempoEmCasaReactC.Model.Anuncio", b =>
                 {
-                    b.HasOne("UmTempoEmCasa.Models.Imovel", "Imovel")
+                    b.HasOne("UmTempoEmCasaReactC.Model.Imovel", "Imovel")
                         .WithMany()
                         .HasForeignKey("ImovelForeignKey")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("UmTempoEmCasa.Models.Imovel", null)
+                    b.HasOne("UmTempoEmCasaReactC.Model.Imovel", null)
                         .WithMany("Anuncios")
                         .HasForeignKey("ImovelID1");
 
                     b.Navigation("Imovel");
                 });
 
-            modelBuilder.Entity("UmTempoEmCasa.Models.Imovel", b =>
+            modelBuilder.Entity("UmTempoEmCasaReactC.Model.Imovel", b =>
                 {
-                    b.HasOne("UmTempoEmCasa.Models.Anfitriao", "Anfitrioes")
+                    b.HasOne("UmTempoEmCasaReactC.Model.Anfitriao", "Anfitrioes")
                         .WithMany("Imovel")
                         .HasForeignKey("AnfitriaoForeignKey")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -327,15 +332,15 @@ namespace UmTempoEmCasa.Migrations
                     b.Navigation("Anfitrioes");
                 });
 
-            modelBuilder.Entity("UmTempoEmCasa.Models.Reserva", b =>
+            modelBuilder.Entity("UmTempoEmCasaReactC.Model.Reserva", b =>
                 {
-                    b.HasOne("UmTempoEmCasa.Models.Anuncio", "Anuncios")
+                    b.HasOne("UmTempoEmCasaReactC.Model.Anuncio", "Anuncios")
                         .WithMany("Reservas")
                         .HasForeignKey("AnuncioForeignKey")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("UmTempoEmCasa.Models.Refugiado", "Refugiados")
+                    b.HasOne("UmTempoEmCasaReactC.Model.Refugiado", "Refugiados")
                         .WithMany("Reservas")
                         .HasForeignKey("RefugiadoForeignKey")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -346,22 +351,22 @@ namespace UmTempoEmCasa.Migrations
                     b.Navigation("Refugiados");
                 });
 
-            modelBuilder.Entity("UmTempoEmCasa.Models.Anfitriao", b =>
+            modelBuilder.Entity("UmTempoEmCasaReactC.Model.Anfitriao", b =>
                 {
                     b.Navigation("Imovel");
                 });
 
-            modelBuilder.Entity("UmTempoEmCasa.Models.Anuncio", b =>
+            modelBuilder.Entity("UmTempoEmCasaReactC.Model.Anuncio", b =>
                 {
                     b.Navigation("Reservas");
                 });
 
-            modelBuilder.Entity("UmTempoEmCasa.Models.Imovel", b =>
+            modelBuilder.Entity("UmTempoEmCasaReactC.Model.Imovel", b =>
                 {
                     b.Navigation("Anuncios");
                 });
 
-            modelBuilder.Entity("UmTempoEmCasa.Models.Refugiado", b =>
+            modelBuilder.Entity("UmTempoEmCasaReactC.Model.Refugiado", b =>
                 {
                     b.Navigation("Reservas");
                 });

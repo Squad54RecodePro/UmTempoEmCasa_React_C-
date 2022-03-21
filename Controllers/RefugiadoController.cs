@@ -1,154 +1,83 @@
-﻿#nullable disable
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using UmTempoEmCasa.Context;
-using UmTempoEmCasa.Models;
+using UmTempoEmCasaReactC.Model;
+using UmTempoEmCasaReactC.Service;
 
-namespace UmTempoEmCasa.Controllers
+namespace UmTempoEmCasaReactC.Controllers
 {
-    public class RefugiadoController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    // [Produces("application/json")] caso precise alterar o que o servidor vai retornar. XML ou JSON
+    public class RefugiadoController : ControllerBase
     {
-        private readonly MVCContext _context;
+        private IRefugiadoService _refugiadoService;
 
-        public RefugiadoController(MVCContext context)
+        public RefugiadoController(IRefugiadoService refugiadoService)
         {
-            _context = context;
+            _refugiadoService = refugiadoService;
         }
-
-        // GET: Refugiado
-        public async Task<IActionResult> Index()
+        [HttpGet]
+        public async Task<ActionResult<IAsyncEnumerable<Refugiado>>> GetRefugiados()
         {
-            return View(await _context.Refugiados.ToListAsync());
-        }
-
-        // GET: Refugiado/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
+            try
             {
-                return NotFound();
+                var refugiados = await _refugiadoService.GetRefugiados();
+                return Ok(refugiados);
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Erro ao Obter Refugiados");
+            }
+        }
+        [HttpGet("RefugiadoPorNome")]
+        public async Task<ActionResult<IAsyncEnumerable<Refugiado>>> 
+            GetRefugiadosByName([FromQuery] string nome)
+        {
+            try
+            {
+                var refugiados = await _refugiadoService.GetRefugiadosByNome(nome);
+                if (refugiados == null)
+                    return NotFound($"Não existem alunos com o nome: {nome} ");
+               
+                return Ok(refugiados);
+            }
+            catch
+            {
+                return BadRequest("Requisição Invalida");
             }
 
-            var refugiado = await _context.Refugiados
-                .FirstOrDefaultAsync(m => m.RefugiadoID == id);
-            if (refugiado == null)
-            {
-                return NotFound();
-            }
-
-            return View(refugiado);
         }
-
-        // GET: Refugiado/Create
-        public IActionResult Create()
+        [HttpGet("{id}:int", Name = "GetRefugiado")]
+        public async Task<ActionResult<Refugiado>> GetRefugiado(int id)
         {
-            return View();
+            try
+            {
+                var refugiado = await _refugiadoService.GetRefugiado(id);
+                if (refugiado == null)
+                    return NotFound($"Não existe aluno com o id: {id} ");
+                return Ok(refugiado);
+            }
+            catch
+            {
+                return BadRequest("Requisição Invalida");
+            }
         }
-
-        // POST: Refugiado/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("RefugiadoID,Nome,Nascimento,CPF,Telefone,Email,Endereco,CEP,Senha")] Refugiado refugiado)
+        public async Task<ActionResult> Create( Refugiado refugiado)
         {
-            if (ModelState.IsValid)
+
+            try
             {
-                _context.Add(refugiado);
-                await _context.SaveChangesAsync();
-                return RedirectToAction("Catalogo", "Anuncio");
+                await _refugiadoService.CreateRefugiado(refugiado);
+                return CreatedAtRoute(nameof(GetRefugiado), new {id = refugiado.RefugiadoID},refugiado);
+                
             }
-            return View(refugiado);
+            catch
+            {
+                return BadRequest("Requisição Invalida");
+            }
         }
 
-        // GET: Refugiado/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var refugiado = await _context.Refugiados.FindAsync(id);
-            if (refugiado == null)
-            {
-                return NotFound();
-            }
-            return View(refugiado);
-        }
-
-        // POST: Refugiado/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("RefugiadoID,Nome,Nascimento,CPF,Telefone,Email,Endereco,CEP,Senha")] Refugiado refugiado)
-        {
-            if (id != refugiado.RefugiadoID)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(refugiado);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!RefugiadoExists(refugiado.RefugiadoID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(refugiado);
-        }
-
-        // GET: Refugiado/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var refugiado = await _context.Refugiados
-                .FirstOrDefaultAsync(m => m.RefugiadoID == id);
-            if (refugiado == null)
-            {
-                return NotFound();
-            }
-
-            return View(refugiado);
-        }
-
-        // POST: Refugiado/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var refugiado = await _context.Refugiados.FindAsync(id);
-            _context.Refugiados.Remove(refugiado);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool RefugiadoExists(int id)
-        {
-            return _context.Refugiados.Any(e => e.RefugiadoID == id);
-        }
+        
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace UmTempoEmCasa.Models
+namespace UmTempoEmCasaReactC.Model
 {
     public class Contato
     {

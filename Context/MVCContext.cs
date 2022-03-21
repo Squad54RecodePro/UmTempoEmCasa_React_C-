@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using UmTempoEmCasa.Models;
+using UmTempoEmCasaReactC.Model;
 
-namespace UmTempoEmCasa.Context
+namespace UmTempoEmCasaReactC.Context
 {
     public class MVCContext : DbContext
     {
@@ -10,19 +10,19 @@ namespace UmTempoEmCasa.Context
         {
         }
 
-        public DbSet<Anuncio> Anuncios { get; set; }
+        public DbSet<Anuncio> anuncios { get; set; }
 
-        public DbSet<Anfitriao> Anfitrioes { get; set; }
+        public DbSet<Anfitriao> anfitrioes { get; set; }
 
-        public DbSet<Imovel> Imoveis { get; set; }
+        public DbSet<Imovel> imoveis { get; set; }
 
-        public DbSet<Refugiado> Refugiados { get; set; }
+        public DbSet<Refugiado> refugiados { get; set; }
 
-        public DbSet<Ongs> Ongs { get; set; }
+        public DbSet<Ongs> ongs { get; set; }
 
-        public DbSet<Reserva> Reservas { get; set; }
+        public DbSet<Reserva> reservas { get; set; }
 
-        public DbSet<Contato> Contatos { get; set; }
+        public DbSet<Contato> contatos { get; set; }
 
         
 
@@ -47,6 +47,12 @@ namespace UmTempoEmCasa.Context
                 .HasOne(p => p.Refugiados)
                 .WithMany(b => b.Reservas)
                 .HasForeignKey(p => p.RefugiadoForeignKey);
+
+            modelBuilder.Entity<Refugiado>()
+                .HasNoKey();
+              
+
+
 
 
 

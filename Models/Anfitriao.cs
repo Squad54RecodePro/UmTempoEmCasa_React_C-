@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace UmTempoEmCasa.Models
+namespace UmTempoEmCasaReactC.Model
 {
     public class Anfitriao
     {

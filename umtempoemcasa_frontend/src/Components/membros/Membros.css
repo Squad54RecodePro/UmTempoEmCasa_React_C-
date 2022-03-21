@@ -2,6 +2,13 @@
     margin-top: -50px;
 }
 
+.cards{
+    background-color: #ff6b2748;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 500px;
+}
+
 #equipe .card {
     border-radius: 0%;
     transition: all 0.3s ease-in;
@@ -10,7 +17,7 @@
 }
 
     #equipe .card:hover {
-        background: #e74c3c;
+        background: #FF6C27;
         color: #fff;
         border-radius: 5px;
         border: none;

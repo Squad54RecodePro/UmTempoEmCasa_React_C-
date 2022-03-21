@@ -1,8 +1,11 @@
 import React from 'react'
+import FormOngs from '../formOngs/formRefugiado';
 
 function Ongs() {
   return (
-    <div>Ongs</div>
+    <div className='row'>
+      <FormOngs/>
+    </div>
   )
 }
 

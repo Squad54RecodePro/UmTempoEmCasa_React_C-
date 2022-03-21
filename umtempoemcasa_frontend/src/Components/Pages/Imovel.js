@@ -1,8 +1,11 @@
 import React from 'react'
+import FormImovel from '../formImovel/formImovel';
 
 function Imovel() {
   return (
-    <div>Imovel</div>
+    <div className='row'>
+      <FormImovel/>
+    </div>
   )
 }
 

@@ -1,8 +1,11 @@
 import React from 'react'
+import FormRefugiado from '../formRefugiado/formRefugiado';
 
 function Refugiado() {
   return (
-    <div>Refugiado</div>
+    <div className='row'>
+      <FormRefugiado/>
+    </div>
   )
 }
 

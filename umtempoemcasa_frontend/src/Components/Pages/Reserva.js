@@ -1,8 +1,11 @@
 import React from 'react'
+import FormReserva from '../formReserva/formReserva';
 
 function Reserva() {
   return (
-    <div>Reserva</div>
+    <div className='row'>
+      <FormReserva/>
+    </div>
   )
 }
 

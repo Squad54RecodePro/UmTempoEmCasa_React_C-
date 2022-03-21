@@ -3,7 +3,7 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar';
+import Navbar from './Components/navbar/Navbar';
 import Home from './Components/Pages/Home';
 import Reserva from './Components/Pages/Reserva';
 import Anfitriao from './Components/Pages/Anfitriao';
@@ -12,7 +12,7 @@ import Contato from './Components/Pages/Contato';
 import Imovel from './Components/Pages/Imovel';
 import Refugiado from './Components/Pages/Refugiado';
 import Ongs from './Components/Pages/Ongs';
-import Footer from './Components/Footer';
+import Footer from './Components/footer/Footer';
 
 
 function App() {
@@ -22,13 +22,13 @@ function App() {
         <Navbar />
         <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/Anuncio' element={<Anuncio />} />
-        <Route path='/Imovel' element={<Imovel />} />
-        <Route path='/Reserva' element={<Reserva />} />
-        <Route path='/Anfitriao' element={<Anfitriao />} />
-        <Route path='/Refugiado' element={<Refugiado />} />
-        <Route path='/Ongs' element={<Ongs />} />
-        <Route path='/Contato' element={<Contato />} />
+        <Route path='/anuncio' element={<Anuncio />} />
+        <Route path='/imovel' element={<Imovel />} />
+        <Route path='/reserva' element={<Reserva />} />
+        <Route path='/anfitriao' element={<Anfitriao />} />
+        <Route path='/refugiado' element={<Refugiado />} />
+        <Route path='/ongs' element={<Ongs />} />
+        <Route path='/contato' element={<Contato />} />
         </Routes>
         <Footer />
       </Router>

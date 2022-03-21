@@ -15,7 +15,7 @@ function Membros() {
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-md-6">
-                    <div class="card">
+                    <div class="card cards">
                         <div class="card-body">
                             <img src="./img/daia.jpg" alt="Daiane" class="img-fluid rounded-circle w-50 mb-3"/>
                             <h3>Daiane</h3>
@@ -49,7 +49,7 @@ function Membros() {
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="card">
+                    <div class="card cards">
                         <div class="card-body">
                             <img src="./img/gabi.jpg" alt="Gabriel" class="img-fluid rounded-circle w-50 mb-3"/>
                             <h3>Gabriel</h3>
@@ -84,7 +84,7 @@ function Membros() {
                 </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <div class="card">
+                    <div class="card cards">
                         <div class="card-body">
                             <img src="./img/john.jpg" alt="Jhon" class="img-fluid rounded-circle w-50 mb-3"/>
                             <h3>John</h3>
@@ -119,13 +119,16 @@ function Membros() {
                 </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <div class="card">
+                    <div class="card cards">
                         <div class="card-body">
-                            <img src="./img/romullo.jpg" alt="Romulo" class="img-fluid rounded-circle w-50 mb-3"/>
-                            <h3>Romulo</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque aperiam minus suscipit
-                                nam provident eum delectus laboriosam eveniet fugit cum, officia dolorem deserunt,
-                                nesciunt fuga incidunt saepe maiores praesentium mollitia!</p>
+                            <img src="./img/romullo.jpg" alt="Romullo" class="img-fluid rounded-circle w-50 mb-3"/>
+                            <h3>Romullo</h3>
+                            <p>Atualmente estudando na instituição RecodePro fullstack, este projeto foi desenvolvido
+                                para ajudar pessoas refugiadas e minha grande participação foi na parte de 
+                                Front-End, muito grato por 
+                                participar dessa equipe. <br/><br/><br/> 
+                                </p>
+
                             <div class="d-flex flex-row justify-content-center">
                                 <div class="p-4">
                                     <a href="/#">
@@ -154,7 +157,7 @@ function Membros() {
                 </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <div class="card">
+                    <div class="card cards">
                         <div class="card-body">
                             <img src="./img/alex.jpg" alt="Alex" class="img-fluid rounded-circle w-50 mb-3"/>
                             <h3>Alex</h3>
@@ -189,7 +192,7 @@ function Membros() {
                 </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <div class="card">
+                    <div class="card cards">
                         <div class="card-body">
                             <img src="./img/dani.jpg" alt="Dani" class="img-fluid rounded-circle w-50 mb-3"/>
                             <h3>Dani</h3>

@@ -21,6 +21,11 @@
     text-shadow: 0 0 0 ;
 }
 
+.form-control:focus {
+    border-color: red;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 69, 0, 25);
+}
+
 .btnEnviar{
     margin-bottom: 30px;
 }
@@ -30,8 +35,4 @@
     margin-left: 20px;
 }
 
-.form-control:focus {
-    border-color: red;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 69, 0, 25);
-    }
     

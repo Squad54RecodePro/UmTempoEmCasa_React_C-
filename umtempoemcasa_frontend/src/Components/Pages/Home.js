@@ -5,11 +5,11 @@ import Membros from '../membros/Membros';
 
 function Home() {
   return (
-    <>
+    <div className="row">
     <HeroSection />
     <Carrossel />
     <Membros />
-    </>
+    </div>
 
   )
 }

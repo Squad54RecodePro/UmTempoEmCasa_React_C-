@@ -21,7 +21,7 @@ class formRefugiado extends Component {
             e.preventDefault()
             const refugiado = this.state
             console.log(refugiado)
-            fetch("http://localhost:8080/cliente/add", {
+            fetch("https://localhost:44351/api/Refugiados", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(refugiado)

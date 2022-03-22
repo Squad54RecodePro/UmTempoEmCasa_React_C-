@@ -4,11 +4,9 @@ using UmTempoEmCasaReactC.Model;
 
 namespace UmTempoEmCasaReactC.Service
 {
-
     public class RefugiadosService : IRefugiadoService
     {
         private readonly MVCContext _context;
-
         public RefugiadosService(MVCContext context)
         {
             _context = context;
@@ -46,8 +44,7 @@ namespace UmTempoEmCasaReactC.Service
         public async Task CreateRefugiado(Refugiado refugiado)
         {
             _context.Refugiados.Add(refugiado);
-            await _context.SaveChangesAsync();
-           
+            await _context.SaveChangesAsync(); 
         }
                       
         public async Task UpdateRefugiado(Refugiado refugiado)
@@ -60,11 +57,6 @@ namespace UmTempoEmCasaReactC.Service
         {
             _context.Refugiados.Remove(refugiado);
             await _context.SaveChangesAsync();
-        }
-
-    
-
-    
-       
+        } 
     }
 }

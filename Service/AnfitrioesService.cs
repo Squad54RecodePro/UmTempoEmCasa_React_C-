@@ -42,7 +42,7 @@ namespace UmTempoEmCasaReactC.Service
             }
         }
 
-        public async Task<IEnumerable<Anfitriao>> GeAnfitrioesByNome(string nome)
+        public async Task<IEnumerable<Anfitriao>> GetAnfitrioesByNome(string nome)
         {
             IEnumerable<Anfitriao> anfitrioes;
             if (!string.IsNullOrWhiteSpace(nome))

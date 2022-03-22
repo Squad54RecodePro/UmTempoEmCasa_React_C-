@@ -6,9 +6,6 @@ namespace UmTempoEmCasaReactC.Model
     {
         public int Id { get; set; }
 
-        
-
-
         [Required(ErrorMessage = "Insira seu Nome para efetuar o Cadastro")]
         [MaxLength(50, ErrorMessage = "Quantidade de carateres maior que o permitido")]
         [MinLength(2, ErrorMessage = "Esse Nome é muito curto, verifique e tente novamente")]

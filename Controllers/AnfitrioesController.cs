@@ -17,14 +17,14 @@ namespace UmTempoEmCasaReactC.Controllers
             _context = context;
         }
 
-        // GET: api/Contatos
+        // GET: api/Anfitrioes
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Anfitriao>>> GetAnfitrioes()
         {
             return await _context.Anfitrioes.ToListAsync();
         }
 
-        // GET: api/Contatos/5
+        // GET: api/Anfitrioes/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Anfitriao>> GetAnfitriao(int id)
         {
@@ -38,7 +38,7 @@ namespace UmTempoEmCasaReactC.Controllers
             return anfitriao;
         }
 
-        // PUT: api/Contatos/5
+        // PUT: api/Anfitrioes/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAnfitriao(int id, Anfitriao anfitriao)
@@ -69,7 +69,7 @@ namespace UmTempoEmCasaReactC.Controllers
             return NoContent();
         }
 
-        // POST: api/Contatos
+        // POST: api/Anfitrioes
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Anfitriao>> PostAnfitriao(Anfitriao anfitriao)
@@ -80,7 +80,7 @@ namespace UmTempoEmCasaReactC.Controllers
             return CreatedAtAction("GetAnfitriao", new { id = anfitriao.Id }, anfitriao);
         }
 
-        // DELETE: api/Contatos/5
+        // DELETE: api/Anfitrioes/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAnfitriao(int id)
         {

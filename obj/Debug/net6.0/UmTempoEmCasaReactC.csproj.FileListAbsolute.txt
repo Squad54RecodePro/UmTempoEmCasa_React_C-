@@ -524,3 +524,13 @@ C:\Users\jcley\Desktop\UmTempoEmCasa_React_C-\obj\Debug\net6.0\refint\UmTempoEmC
 C:\Users\jcley\Desktop\UmTempoEmCasa_React_C-\obj\Debug\net6.0\UmTempoEmCasaReactC.pdb
 C:\Users\jcley\Desktop\UmTempoEmCasa_React_C-\obj\Debug\net6.0\UmTempoEmCasaReactC.genruntimeconfig.cache
 C:\Users\jcley\Desktop\UmTempoEmCasa_React_C-\obj\Debug\net6.0\ref\UmTempoEmCasaReactC.dll
+C:\Users\daia_\Desktop\UmTempoEmCasa_React_C-\obj\Debug\net6.0\UmTempoEmCasaReactC.csproj.AssemblyReference.cache
+C:\Users\daia_\Desktop\UmTempoEmCasa_React_C-\obj\Debug\net6.0\UmTempoEmCasaReactC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\daia_\Desktop\UmTempoEmCasa_React_C-\obj\Debug\net6.0\UmTempoEmCasaReactC.AssemblyInfoInputs.cache
+C:\Users\daia_\Desktop\UmTempoEmCasa_React_C-\obj\Debug\net6.0\UmTempoEmCasaReactC.AssemblyInfo.cs
+C:\Users\daia_\Desktop\UmTempoEmCasa_React_C-\obj\Debug\net6.0\UmTempoEmCasaReactC.csproj.CoreCompileInputs.cache
+C:\Users\daia_\Desktop\UmTempoEmCasa_React_C-\obj\Debug\net6.0\UmTempoEmCasaReactC.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\daia_\Desktop\UmTempoEmCasa_React_C-\obj\Debug\net6.0\UmTempoEmCasaReactC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\daia_\Desktop\UmTempoEmCasa_React_C-\obj\Debug\net6.0\UmTempoEmCasaReactC.dll
+C:\Users\daia_\Desktop\UmTempoEmCasa_React_C-\obj\Debug\net6.0\ref\UmTempoEmCasaReactC.dll
+C:\Users\daia_\Desktop\UmTempoEmCasa_React_C-\obj\Debug\net6.0\UmTempoEmCasaReactC.pdb

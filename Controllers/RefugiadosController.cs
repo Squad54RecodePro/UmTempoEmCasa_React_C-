@@ -43,13 +43,13 @@ namespace UmTempoEmCasaReactC.Controllers
             {
                 var refugiados = await _refugiadoService.GetRefugiadosByNome(nome);
                 if (refugiados == null)
-                    return NotFound($"Não existem contatos com o nome: {nome} ");
+                    return NotFound($"Não existem refugiados com o nome: {nome} ");
 
                 return Ok(refugiados);
             }
             catch
             {
-                return BadRequest("Requisição Invalida");
+                return BadRequest("Requisição Inválida");
             }
 
         }
@@ -60,13 +60,13 @@ namespace UmTempoEmCasaReactC.Controllers
             {
                 var refugiado = await _refugiadoService.GetRefugiado(id);
                 if (refugiado == null)
-                    return NotFound($"Não existe aluno com o id: {id} ");
+                    return NotFound($"Não existe refugiado com o id: {id} ");
                 else
                     return Ok(refugiado);
             }
             catch
             {
-                return BadRequest("Requisição Invalida");
+                return BadRequest("Requisição Inválida");
             }
         }
         [HttpPost]
@@ -81,10 +81,9 @@ namespace UmTempoEmCasaReactC.Controllers
             }
             catch
             {
-                return BadRequest("Requisição Invalida");
+                return BadRequest("Requisição Inválida");
             }
         }
-
 
         // PUT: api/Refugiados/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
@@ -95,8 +94,6 @@ namespace UmTempoEmCasaReactC.Controllers
             {
                 return BadRequest();
             }
-
-           
 
             try
             {
@@ -112,13 +109,9 @@ namespace UmTempoEmCasaReactC.Controllers
             }
             catch
             {
-                return BadRequest("Requisição invalida");
+                return BadRequest("Requisição inválida");
             }
-
-           
         }
-
-        
 
         // DELETE: api/Refugiados/5
         [HttpDelete("{id}")]
@@ -141,13 +134,8 @@ namespace UmTempoEmCasaReactC.Controllers
             } 
             catch 
             {
-                return BadRequest("Requisição invalida");
+                return BadRequest("Requisição inválida");
             }
-
-            
-            
         }
-
-       
     }
 }

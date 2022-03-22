@@ -9,17 +9,19 @@ namespace UmTempoEmCasaReactC.Context
             : base(options)
         {
         }
-                
-
+        
         public DbSet<Refugiado> Refugiados { get; set; }
 
-        
         public DbSet<Contato> Contatos { get; set; }
 
         public DbSet<Anfitriao> Anfitrioes { get; set; }
 
-        
+        public DbSet<Anuncio> Anuncios { get; set; }
 
-        
+        public DbSet<Imovel> Imoveis { get; set; }
+
+        public DbSet<Reserva> Reservas { get; set; }
+
+        public DbSet<Ong> Ongs { get; set; }
     }
 }

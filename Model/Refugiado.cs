@@ -10,7 +10,8 @@ namespace UmTempoEmCasaReactC.Model
     public class Refugiado
     {
         public int Id { get; set; }
-                      
+        public List<Reserva>? Reservas { get; set; }
+
         [MaxLength(50, ErrorMessage = "Quantidade de carateres maior que o permitido")]
         [MinLength(2, ErrorMessage = "Esse Nome é muito curto, verifique e tente novamente")]
         [Required]

@@ -58,34 +58,5 @@ namespace UmTempoEmCasaReactC.Service
             await _context.SaveChangesAsync();
         }
 
-        Task<IEnumerable<Refugiado>> IImovelService.GetImoveis()
-        {
-            throw new NotImplementedException();
-        }
-
-        Task<Refugiado> IImovelService.GetImovel(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        Task<IEnumerable<Refugiado>> IImovelService.GetImoveisByNome(string nome)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task CreateImovel(Refugiado refugiado)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task UpdateImovel(Refugiado refugiado)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task DeleteImovel(Refugiado refugiado)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

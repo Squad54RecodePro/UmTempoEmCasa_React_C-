@@ -9650,19 +9650,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\daia_\\.nuget\\packages\\": {}
+    "C:\\Users\\jcley\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\daia_\\Desktop\\UmTempoEmCasa_React_C-\\UmTempoEmCasaReactC.csproj",
+      "projectUniqueName": "C:\\Users\\jcley\\Desktop\\UmTempoEmCasa_React_C-\\UmTempoEmCasaReactC.csproj",
       "projectName": "UmTempoEmCasaReactC",
-      "projectPath": "C:\\Users\\daia_\\Desktop\\UmTempoEmCasa_React_C-\\UmTempoEmCasaReactC.csproj",
-      "packagesPath": "C:\\Users\\daia_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\daia_\\Desktop\\UmTempoEmCasa_React_C-\\obj\\",
+      "projectPath": "C:\\Users\\jcley\\Desktop\\UmTempoEmCasa_React_C-\\UmTempoEmCasaReactC.csproj",
+      "packagesPath": "C:\\Users\\jcley\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jcley\\Desktop\\UmTempoEmCasa_React_C-\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\daia_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jcley\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9725,7 +9725,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

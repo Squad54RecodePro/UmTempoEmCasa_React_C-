@@ -4,7 +4,7 @@ using UmTempoEmCasaReactC.Model;
 
 namespace UmTempoEmCasaReactC.Service
 {
-    public class AnfitrioesService
+    public class AnfitrioesService:IAnfitriaoService
     {
         private readonly MVCContext _context;
         public AnfitrioesService(MVCContext context)

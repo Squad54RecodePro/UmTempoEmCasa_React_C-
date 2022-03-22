@@ -4,13 +4,12 @@ namespace UmTempoEmCasaReactC.Service
 {
     public interface IImovelService
     {
-        Task<IEnumerable<Refugiado>> GetImoveis();
-        Task<Refugiado> GetImovel(int id);
-        Task<IEnumerable<Refugiado>> GetImoveisByNome(string nome);
-        Task CreateImovel(Refugiado refugiado);
-        Task UpdateImovel(Refugiado refugiado);
-        Task DeleteImovel(Refugiado refugiado);
+        Task<IEnumerable<Imovel>> GetImoveis();
+        Task<Imovel> GetImovel(int id);
+        Task<IEnumerable<Imovel>> GetImoveisByNome(string nome);
         Task CreateImovel(Imovel imovel);
         Task UpdateImovel(Imovel imovel);
+        Task DeleteImovel(Imovel imovel);
+       
     }
 }

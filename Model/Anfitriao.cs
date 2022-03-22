@@ -5,6 +5,7 @@ namespace UmTempoEmCasaReactC.Model
     public class Anfitriao
     {
         public int Id { get; set; }
+        public List<Imovel>? Imovel { get; set; }
 
         [Required(ErrorMessage = "Insira seu Nome para efetuar o Cadastro")]
         [MaxLength(50, ErrorMessage = "Quantidade de carateres maior que o permitido")]

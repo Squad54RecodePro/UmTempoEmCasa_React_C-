@@ -10,6 +10,12 @@ namespace UmTempoEmCasaReactC.Model
     public class Imovel
     {
         public int Id { get; set; }
+        public virtual List<Anuncio>? Anuncios { get; set; }
+
+        [Display(Name = "Nome do Anfitrião")]
+        public int AnfitriaoForeignKey { get; set; }
+        public Anfitriao? Anfitrioes { get; set; }
+
 
         [Required(ErrorMessage = "Informe o Endereço do Imovel")]
         [MaxLength(50, ErrorMessage = "Maximo de caracteres excedido")]

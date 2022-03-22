@@ -15,6 +15,13 @@ builder.Services.AddDbContext<MVCContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoBanco"));
 });
 builder.Services.AddScoped<IRefugiadoService, RefugiadosService>();
+builder.Services.AddScoped<IAnuncioService, AnunciosService>();
+builder.Services.AddScoped<IImovelService, ImoveisService>();
+builder.Services.AddScoped<IReservaService, ReservasService>();
+builder.Services.AddScoped<IOngService, OngsService>();
+builder.Services.AddScoped<IContatoService, ContatosService>();
+builder.Services.AddScoped<IAnfitriaoService, AnfitrioesService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

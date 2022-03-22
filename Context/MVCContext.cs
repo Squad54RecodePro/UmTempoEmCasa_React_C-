@@ -23,5 +23,34 @@ namespace UmTempoEmCasaReactC.Context
         public DbSet<Reserva> Reservas { get; set; }
 
         public DbSet<Ong> Ongs { get; set; }
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Anuncio>()
+                .HasOne(p => p.Imovel)
+                .WithMany()
+                .HasForeignKey(p => p.ImovelForeignKey);
+
+            modelBuilder.Entity<Imovel>()
+                .HasOne(p => p.Anfitrioes)
+                .WithMany(b => b.Imovel)
+                .HasForeignKey(p => p.AnfitriaoForeignKey);
+
+            modelBuilder.Entity<Reserva>()
+                .HasOne(p => p.Anuncios)
+                .WithMany(b => b.Reservas)
+                .HasForeignKey(p => p.AnuncioForeignKey);
+
+            modelBuilder.Entity<Reserva>()
+                .HasOne(p => p.Refugiados)
+                .WithMany(b => b.Reservas)
+                .HasForeignKey(p => p.RefugiadoForeignKey);
+
+
+
+        }
     }
+
+
 }

@@ -6,7 +6,7 @@ class ReservaService extends React.Component() {
     }
 
     componentDidMount() {
-        axios.get("http://localhost:8080/cliente/getAll")
+        axios.get("https://localhost:44351/api/Reservas")
             .then(res => {
                 const dadosreservas = res.data
                 this.setState({ reservas: dadosreservas })
@@ -17,8 +17,8 @@ class ReservaService extends React.Component() {
     }
 
     deleteReserva(id) {
-        if (window.confirm('Deseja excluir o Cadastro?')) {
-            fetch('http://localhost:8080/cliente/' + id, {
+        if (window.confirm('Deseja excluir a Reserva?')) {
+            fetch('https://localhost:44351/api/Reservas/' + id, {
                 method: 'DELETE',
                 header: {
                     'Accept': 'application/json',
@@ -51,7 +51,7 @@ class ReservaService extends React.Component() {
                             Senha:{reserva.senha}<br />
                             <Button id="buttoncrud" variant="contained" color="primary" >Detalhes</Button>
                             <Button id="buttoncrud" variant="contained" color="secondary">Alterar</Button>
-                            <Button id="buttoncrud" variant="contained" color="danger" onClick={() => this.deleteCliente(cliente.id)} >Excluir</Button>
+                            <Button id="buttoncrud" variant="contained" color="danger" onClick={() => this.deleteReserva(reserva.id)} >Excluir</Button>
 
                         </Paper>
                     ))

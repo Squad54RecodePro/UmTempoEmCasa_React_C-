@@ -6,7 +6,7 @@ class AnuncioService extends React.Component() {
     }
 
     componentDidMount() {
-        axios.get("http://localhost:8080/cliente/getAll")
+        axios.get('https://localhost:44351/api/Anuncios')
             .then(res => {
                 const dadosanuncios = res.data
                 this.setState({ anuncios: dadosanuncios })
@@ -17,8 +17,8 @@ class AnuncioService extends React.Component() {
     }
 
     deleteAnuncio(id) {
-        if (window.confirm('Deseja excluir o Cadastro?')) {
-            fetch('http://localhost:8080/cliente/' + id, {
+        if (window.confirm('Deseja excluir o Anúncio?')) {
+            fetch('https://localhost:44351/api/Anuncios/' + id, {
                 method: 'DELETE',
                 header: {
                     'Accept': 'application/json',
@@ -46,7 +46,7 @@ class AnuncioService extends React.Component() {
                             Nome:{anuncio.nome}<br />
                             <Button id="buttoncrud" variant="contained" color="primary" >Detalhes</Button>
                             <Button id="buttoncrud" variant="contained" color="secondary">Alterar</Button>
-                            <Button id="buttoncrud" variant="contained" color="danger" onClick={() => this.deleteCliente(cliente.id)} >Excluir</Button>
+                            <Button id="buttoncrud" variant="contained" color="danger" onClick={() => this.deleteAnuncio(anuncio.id)} >Excluir</Button>
 
                         </Paper>
                     ))

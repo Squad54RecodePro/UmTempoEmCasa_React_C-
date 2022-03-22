@@ -15,7 +15,7 @@ class formOngs extends Component {
         e.preventDefault()
         const ongs = this.state
         console.log(ongs)
-        fetch("http://localhost:8080/cliente/add", {
+        fetch('https://localhost:44351/api/Ongs', {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(ongs)

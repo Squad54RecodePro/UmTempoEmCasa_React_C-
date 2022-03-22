@@ -5,7 +5,7 @@ class OngsService extends React.Component() {
         ongs: []
     }
     componentDidMount(){
-        axios.get("http://localhost:8080/cliente/getAll")
+        axios.get('https://localhost:44351/api/Ongs')
         .then(res=>{
             const dadosongs = res.data
             this.setState({ongs:dadosongs})
@@ -15,9 +15,9 @@ class OngsService extends React.Component() {
         this.componentDidMount();
     }
 
-    deleteCliente(id){
+    deleteOng(id){
         if(window.confirm('Deseja excluir o Cadastro?')){
-            fetch('http://localhost:8080/cliente/'+id,{
+            fetch('https://localhost:44351/api/Ongs/' + id, {
                 method:'DELETE',
                 header:{'Accept':'application/json',
                 'Content-Type':'application/json'    
@@ -46,7 +46,7 @@ render() {
                         Telefone:{ong.telefone}<br />
                         <Button id="buttoncrud" variant="contained" color="primary" >Detalhes</Button>
                         <Button id="buttoncrud" variant="contained" color="secondary">Alterar</Button>
-                        <Button id="buttoncrud" variant="contained" color="danger" onClick={()=>this.deleteCliente(cliente.id)} >Excluir</Button>
+                        <Button id="buttoncrud" variant="contained" color="danger" onClick={()=>this.deleteOng(ong.id)} >Excluir</Button>
 
                     </Paper>
                 ))

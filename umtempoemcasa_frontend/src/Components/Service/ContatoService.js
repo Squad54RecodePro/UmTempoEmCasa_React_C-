@@ -6,7 +6,7 @@ class ContatoService extends React.Component() {
     }
 
     componentDidMount() {
-        axios.get("http://localhost:8080/cliente/getAll")
+        axios.get('https://localhost:44351/api/Contatos')
             .then(res => {
                 const dadoscontatos = res.data
                 this.setState({ contatos: dadoscontatos })
@@ -17,8 +17,8 @@ class ContatoService extends React.Component() {
     }
 
     deleteContato(id) {
-        if (window.confirm('Deseja excluir o Cadastro?')) {
-            fetch('http://localhost:8080/cliente/' + id, {
+        if (window.confirm('Deseja excluir o Contato?')) {
+            fetch('https://localhost:44351/api/Contatos/' + id, {
                 method: 'DELETE',
                 header: {
                     'Accept': 'application/json',
@@ -47,7 +47,7 @@ class ContatoService extends React.Component() {
                             Mensagem:{contato.mensagem}<br />
                             <Button id="buttoncrud" variant="contained" color="primary" >Detalhes</Button>
                             <Button id="buttoncrud" variant="contained" color="secondary">Alterar</Button>
-                            <Button id="buttoncrud" variant="contained" color="danger" onClick={() => this.deleteCliente(cliente.id)} >Excluir</Button>
+                            <Button id="buttoncrud" variant="contained" color="danger" onClick={() => this.deleteContato(contato.id)} >Excluir</Button>
 
                         </Paper>
                     ))

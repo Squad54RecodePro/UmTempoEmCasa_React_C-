@@ -14,7 +14,7 @@ class formContato extends Component {
         e.preventDefault()
         const contato = this.state
         console.log(contato)
-        fetch("http://localhost:8080/cliente/add", {
+        fetch('https://localhost:44351/api/Contatos', {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(contato)

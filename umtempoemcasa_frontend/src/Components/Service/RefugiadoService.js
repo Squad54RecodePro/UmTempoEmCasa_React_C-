@@ -9,7 +9,7 @@ class RefugiadoService extends React.Component() {
     }
 
   componentDidMount(){
-        axios.get("http://localhost:8080/cliente/getAll")
+        axios.get('https://localhost:44351/api/Refugiados')
           .then(res => {
             const dadosrefugiados = res.data
             this.setState({ refugiados: dadosrefugiados })
@@ -20,9 +20,9 @@ class RefugiadoService extends React.Component() {
         this.componentDidMount();
       }
 
-  deleteCliente(id) {
+  deleteRefugiado(id) {
         if (window.confirm('Deseja excluir o Cadastro?')) {
-          fetch('http://localhost:8080/cliente/' + id, {
+          fetch('https://localhost:44351/api/Refugiados/' + id, {
             method: 'DELETE',
             header: {
               'Accept': 'application/json',
@@ -55,7 +55,7 @@ render() {
                   Senha:{refugiado.senha}<br />
                   <Button id="buttoncrud" variant="contained" color="primary" >Detalhes</Button>
                   <Button id="buttoncrud" variant="contained" color="secondary">Alterar</Button>
-                  <Button id="buttoncrud" variant="contained" color="danger" onClick={() => this.deleteCliente(cliente.id)} >Excluir</Button>
+                  <Button id="buttoncrud" variant="contained" color="danger" onClick={() => this.deleteRefugiado(refugiado.id)} >Excluir</Button>
 
                 </Paper>
               ))

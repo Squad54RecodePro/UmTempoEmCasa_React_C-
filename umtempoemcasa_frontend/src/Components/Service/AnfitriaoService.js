@@ -6,7 +6,7 @@ class AnfitriaoService extends React.Component() {
     }
 
     componentDidMount() {
-        axios.get("http://localhost:8080/cliente/getAll")
+        axios.get('https://localhost:44351/api/Anfitrioes')
             .then(res => {
                 const dadosanfitrioes = res.data
                 this.setState({ anfitrioes: dadosanfitrioes })
@@ -18,7 +18,7 @@ class AnfitriaoService extends React.Component() {
 
     deleteAnfitriao(id) {
         if (window.confirm('Deseja excluir o Cadastro?')) {
-            fetch('http://localhost:8080/cliente/' + id, {
+            fetch('https://localhost:44351/api/Anfitrioes/' + id, {
                 method: 'DELETE',
                 header: {
                     'Accept': 'application/json',
@@ -54,7 +54,7 @@ class AnfitriaoService extends React.Component() {
                             Senha:{anfitriao.senha}<br />
                             <Button id="buttoncrud" variant="contained" color="primary" >Detalhes</Button>
                             <Button id="buttoncrud" variant="contained" color="secondary">Alterar</Button>
-                            <Button id="buttoncrud" variant="contained" color="danger" onClick={() => this.deleteCliente(cliente.id)} >Excluir</Button>
+                            <Button id="buttoncrud" variant="contained" color="danger" onClick={() => this.deleteAnfitriao(anfitriao.id)} >Excluir</Button>
 
                         </Paper>
                     ))

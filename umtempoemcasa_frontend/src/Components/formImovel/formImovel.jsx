@@ -12,7 +12,7 @@ class formImovel extends Component {
         e.preventDefault()
         const imovel = this.state
         console.log(imovel)
-        fetch("http://localhost:8080/cliente/add", {
+        fetch('https://localhost:44351/api/Imoveis', {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(imovel)

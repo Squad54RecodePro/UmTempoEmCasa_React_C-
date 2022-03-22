@@ -14,7 +14,7 @@ namespace UmTempoEmCasaReactC.Context
         public DbSet<Refugiado> Refugiados { get; set; }
 
         
-        public DbSet<Contato> contatos { get; set; }
+        public DbSet<Contato> Contatos { get; set; }
 
         
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jcley\\source\\repos\\UmTempoEmCasaReactC\\UmTempoEmCasaReactC.csproj": {}
+    "C:\\Users\\jcley\\Desktop\\UmTempoEmCasa_React_C-\\UmTempoEmCasaReactC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jcley\\source\\repos\\UmTempoEmCasaReactC\\UmTempoEmCasaReactC.csproj": {
+    "C:\\Users\\jcley\\Desktop\\UmTempoEmCasa_React_C-\\UmTempoEmCasaReactC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jcley\\source\\repos\\UmTempoEmCasaReactC\\UmTempoEmCasaReactC.csproj",
+        "projectUniqueName": "C:\\Users\\jcley\\Desktop\\UmTempoEmCasa_React_C-\\UmTempoEmCasaReactC.csproj",
         "projectName": "UmTempoEmCasaReactC",
-        "projectPath": "C:\\Users\\jcley\\source\\repos\\UmTempoEmCasaReactC\\UmTempoEmCasaReactC.csproj",
+        "projectPath": "C:\\Users\\jcley\\Desktop\\UmTempoEmCasa_React_C-\\UmTempoEmCasaReactC.csproj",
         "packagesPath": "C:\\Users\\jcley\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jcley\\source\\repos\\UmTempoEmCasaReactC\\obj\\",
+        "outputPath": "C:\\Users\\jcley\\Desktop\\UmTempoEmCasa_React_C-\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jcley\\AppData\\Roaming\\NuGet\\NuGet.Config",

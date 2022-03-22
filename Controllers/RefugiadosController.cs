@@ -43,7 +43,7 @@ namespace UmTempoEmCasaReactC.Controllers
             {
                 var refugiados = await _refugiadoService.GetRefugiadosByNome(nome);
                 if (refugiados == null)
-                    return NotFound($"Não existem alunos com o nome: {nome} ");
+                    return NotFound($"Não existem contatos com o nome: {nome} ");
 
                 return Ok(refugiados);
             }

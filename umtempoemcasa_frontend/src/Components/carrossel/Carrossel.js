@@ -22,7 +22,7 @@ function Carrossel() {
                     <div className="single-box">
                       <div className="img-area"><img src="~/inter.png" alt="" /></div>
                       <div className="img-text">
-                        <h2>Pessoa Um</h2>
+                        <h2>Maria Silva /SP</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quibusdam, deleniti ipsam enim atque beatae molestias officia possimus perferendis consequuntur sunt doloribus quae eveniet veritatis maiores quisquam aliquam placeat. Doloremque!</p>
                       </div>
                     </div>

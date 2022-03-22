@@ -2,12 +2,26 @@ import React, { Component } from 'react'
 import './style.css'
 
 class formImovel extends Component {
-    constructor(props) {
-        super(props)
+    state = {
+        endereco:'',
+        cidade:'',
+        cep:''
+    }
+    cadastrarImovel = (e) => {
+    
+        e.preventDefault()
+        const imovel = this.state
+        console.log(imovel)
+        fetch("http://localhost:8080/cliente/add", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(imovel)
 
-        this.state = {
+        }).then(() => {
+            console.log("Mensagem enviada")
+            window.alert("Imovel adicionado com sucesso!")
 
-        }
+        })
     }
     render() {
         return (
@@ -19,17 +33,17 @@ class formImovel extends Component {
                     <div className='row'>
                         <div className='col-md-6 offset-md-3'>
                             <label className='form-label'>Endereço :</label>
-                            <input type="text" className="form-control" placeholder='Insira o endereço *'></input>
+                            <input type="text" className="form-control" placeholder='Insira o endereço *' onChange={(e) => this.setState({endereco: e.target.value })}></input>
                             <br />
                             <label className='form-label'>Cidade :</label>
-                            <input type="text" className="form-control" placeholder='Insira sua cidade *'></input>
+                            <input type="text" className="form-control" placeholder='Insira sua cidade *' onChange={(e) => this.setState({cidade: e.target.value })}></input>
                             <br />
-                            <label className='form-label'>Cep :</label>
-                            <input type="text" className="form-control" placeholder='Insira o CEP *'></input>
+                            <label className='form-label'>CEP :</label>
+                            <input type="text" className="form-control" placeholder='Insira o CEP *' onChange={(e) => this.setState({cep: e.target.value})}></input>
                         </div>
                     </div>
                     <div className='alignButtons'>
-                    <button className='btn btn-success btnEnviar'>Enviar</button>
+                    <button className='btn btn-success btnEnviar' onClick={this.cadastrarImovel}>Enviar</button>
                     <button className='btn btn-danger btnCancelar' href="/">Cancelar</button>
                     </div>
                     

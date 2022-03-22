@@ -13,3 +13,7 @@
 .card-body, .card, .row {
     border: none;
 }
+
+.card-title {
+    text-align: center;
+}

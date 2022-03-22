@@ -8,9 +8,7 @@ function Membros() {
             <div className="row mb-5">
                 <div class="col">
                     <h1>Nossa Equipe</h1>
-                    <p class="mt-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque natus animi ipsum,
-                        quod, nobis, explicabo unde delectus maxime voluptatum necessitatibus ullam. Assumenda quidem
-                        aut suscipit perspiciatis nostrum! Quas, ad tenetur!</p>
+                    <p class="mt-3"> Somos o SQUAD 54 com motivações e desejos semelhantes, nos introduzir na área de programação. Transformando nosso conhecimento em ferramenta útil para a sociedade!</p>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -19,9 +17,8 @@ function Membros() {
                         <div class="card-body">
                             <img src="./img/daia.jpg" alt="Daiane" class="img-fluid rounded-circle w-50 mb-3"/>
                             <h3>Daiane</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque aperiam minus suscipit
-                                nam provident eum delectus laboriosam eveniet fugit cum, officia dolorem deserunt,
-                                nesciunt fuga incidunt saepe maiores praesentium mollitia!</p>
+                            <p>Futura Desenvolvedora Full Stack Júnior, graduanda em Análise e Desenvolvimento de Sistemas. Motivada com as descobertas que venho fazendo através da programação.
+Feliz em fazer parte do projeto "Um tempo em Casa", uma iniciativa tão importante, que transforma tantas vidas.</p>
                             <div class="d-flex flex-row justify-content-center">
                                 <div class="p-4">
                                     <a href="/#">
@@ -53,9 +50,7 @@ function Membros() {
                         <div class="card-body">
                             <img src="./img/gabi.jpg" alt="Gabriel" class="img-fluid rounded-circle w-50 mb-3"/>
                             <h3>Gabriel</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque aperiam minus suscipit
-                                nam provident eum delectus laboriosam eveniet fugit cum, officia dolorem deserunt,
-                                nesciunt fuga incidunt saepe maiores praesentium mollitia!</p>
+                            <p>Desenvolvedor Full-Stack movido por criatividade. Iniciei na programação pois foi o lugar onde pude envolver todos os meus sonhos e criar ferramentas úteis para a sociedade! A Recode Pro me deu uma direção e clareou o meu caminho e espero transformar todo o conhecimento no meu futuro.</p>
                             <div class="d-flex flex-row justify-content-center">
                                 <div class="p-4">
                                     <a href="/#">

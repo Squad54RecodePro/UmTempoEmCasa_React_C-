@@ -1,5 +1,5 @@
 import React from 'react'
-import FormOngs from '../formOngs/formRefugiado';
+import FormOngs from '../formOngs/formOngs';
 
 function Ongs() {
   return (

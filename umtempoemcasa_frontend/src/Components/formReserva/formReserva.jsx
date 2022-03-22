@@ -2,12 +2,32 @@ import React, { Component } from 'react'
 import './style.css'
 
 class formReserva extends Component {
-    constructor(props) {
-        super(props)
+    state = {
+        nome:'',
+        nascimento:'',
+        cpf:'',
+        telefone:'',
+        email:'',
+        endereco:'',
+        cep:'',
+        senha:''
+    }
 
-        this.state = {
+     cadastrarRefugiado = (e) => {
 
-        }
+        e.preventDefault()
+        const refugiado = this.state
+        console.log(refugiado)
+        fetch("http://localhost:8080/cliente/add", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(refugiado)
+
+        }).then(() => {
+            console.log("Novo Cliente Adicionado")
+            window.alert("Cadastro realizado com Sucesso!")
+
+        })
     }
     render() {
         return (

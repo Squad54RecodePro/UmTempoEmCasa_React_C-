@@ -16,6 +16,8 @@ namespace UmTempoEmCasaReactC.Context
         
         public DbSet<Contato> Contatos { get; set; }
 
+        public DbSet<Anfitriao> Anfitrioes { get; set; }
+
         
 
         

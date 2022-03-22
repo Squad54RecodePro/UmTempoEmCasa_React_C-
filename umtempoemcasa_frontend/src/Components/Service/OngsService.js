@@ -7,7 +7,7 @@ class OngsService extends React.Component() {
     componentDidMount(){
         axios.get("http://localhost:8080/cliente/getAll")
         .then(res=>{
-            const dadosongs=res.data
+            const dadosongs = res.data
             this.setState({ongs:dadosongs})
         })
     }
@@ -41,9 +41,9 @@ render() {
                     <Paper elevation={6} style={{ margin: "10px", padding: "15px", textAlign: "left" }} key={ong.id}>
                         Nome:{ong.nome}<br />
                         E-mail:{ong.email}<br />
-                        CNPJ:{ong.email}<br />
-                        Endereço:{ong.email}<br />
-                        Telefone:{ong.email}<br />
+                        CNPJ:{ong.cnpj}<br />
+                        Endereço:{ong.endereco}<br />
+                        Telefone:{ong.telefone}<br />
                         <Button id="buttoncrud" variant="contained" color="primary" >Detalhes</Button>
                         <Button id="buttoncrud" variant="contained" color="secondary">Alterar</Button>
                         <Button id="buttoncrud" variant="contained" color="danger" onClick={()=>this.deleteCliente(cliente.id)} >Excluir</Button>

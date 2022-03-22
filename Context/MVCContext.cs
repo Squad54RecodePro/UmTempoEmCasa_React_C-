@@ -9,24 +9,15 @@ namespace UmTempoEmCasaReactC.Context
             : base(options)
         {
         }
+                
 
-        public DbSet<Refugiado> refugiados { get; set; }
+        public DbSet<Refugiado> Refugiados { get; set; }
 
-       
+        
+        public DbSet<Contato> contatos { get; set; }
+
         
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            
-
-            modelBuilder.Entity<Refugiado>()
-                .HasNoKey();
-              
-
-
-
-
-
-        }
+        
     }
 }

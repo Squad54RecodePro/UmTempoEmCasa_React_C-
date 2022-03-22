@@ -22,8 +22,46 @@ namespace UmTempoEmCasaReactC.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("UmTempoEmCasaReactC.Model.Contato", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("assunto")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("mensagem")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("contatos");
+                });
+
             modelBuilder.Entity("UmTempoEmCasaReactC.Model.Refugiado", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
                     b.Property<string>("CEP")
                         .IsRequired()
                         .HasMaxLength(10)
@@ -52,9 +90,6 @@ namespace UmTempoEmCasaReactC.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("RefugiadoID")
-                        .HasColumnType("int");
-
                     b.Property<string>("Senha")
                         .IsRequired()
                         .HasMaxLength(15)
@@ -65,7 +100,9 @@ namespace UmTempoEmCasaReactC.Migrations
                         .HasMaxLength(11)
                         .HasColumnType("nvarchar(11)");
 
-                    b.ToTable("refugiados");
+                    b.HasKey("Id");
+
+                    b.ToTable("Refugiados");
                 });
 #pragma warning restore 612, 618
         }

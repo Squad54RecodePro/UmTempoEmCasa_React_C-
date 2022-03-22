@@ -13,33 +13,24 @@ namespace UmTempoEmCasaReactC.Service
         {
             _context = context;
         }
-
-       
-        public async Task CreateRefugiado(Refugiado refugiado)
-        {
-            _context.refugiados.Add(refugiado);
-            await _context.SaveChangesAsync();
-           
-        }
-
         public async Task<IEnumerable<Refugiado>> GetRefugiados()
         {
-            try 
+            try
             {
-                return await _context.refugiados.ToListAsync();
-            } 
-            catch 
-            { 
-                throw; 
+                return await _context.Refugiados.ToListAsync();
             }
-            
+            catch
+            {
+                throw;
+            }
+
         }
         public async Task<IEnumerable<Refugiado>> GetRefugiadosByNome(string nome)
         {
             IEnumerable<Refugiado> refugiados;
             if (!string.IsNullOrWhiteSpace(nome))
             {
-                refugiados = await _context.refugiados.Where(n => n.Nome.Contains(nome)).ToListAsync();
+                refugiados = await _context.Refugiados.Where(n => n.Nome.Contains(nome)).ToListAsync();
             }
             else
             {
@@ -47,11 +38,18 @@ namespace UmTempoEmCasaReactC.Service
             }
             return refugiados;
         }
-        public async Task<Refugiado> GetRefugiado(int id)
+        public  async Task<Refugiado> GetRefugiado(int id)
         {
-            var refugiado = await _context.refugiados.FindAsync(id);
+            var refugiado = await _context.Refugiados.FindAsync(id);
             return refugiado;
         }
+        public async Task CreateRefugiado(Refugiado refugiado)
+        {
+            _context.Refugiados.Add(refugiado);
+            await _context.SaveChangesAsync();
+           
+        }
+                      
         public async Task UpdateRefugiado(Refugiado refugiado)
         {
             _context.Entry(refugiado).State = EntityState.Modified;
@@ -60,7 +58,7 @@ namespace UmTempoEmCasaReactC.Service
 
         public async Task DeleteRefugiado(Refugiado refugiado)
         {
-            _context.refugiados.Remove(refugiado);
+            _context.Refugiados.Remove(refugiado);
             await _context.SaveChangesAsync();
         }
 

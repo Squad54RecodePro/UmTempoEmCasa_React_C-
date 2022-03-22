@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,9 +8,8 @@ namespace UmTempoEmCasaReactC.Model
 {
     public class Refugiado
     {
-        public int RefugiadoID { get; set; }
-
-        public List<Reserva>? Reservas { get; set; }
+        public int ID { get; set; }
+               
 
         [Required(ErrorMessage = "Insira seu Nome para efetuar o Cadastro")]
         [MaxLength(50, ErrorMessage = "Quantidade de carateres maior que o permitido")]

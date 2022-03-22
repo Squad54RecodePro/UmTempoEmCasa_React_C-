@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yRGU4mhGYsb1Ywnoj4Ow1/FlfuIqIi5FALjPf14FH7MfzxCe4sK9BoQyY02RmmX0zIEJe6bcIrmTZvdYKPqe4Q==",
+  "dgSpecHash": "5adUo+x7dWyIBax37PpkD0jjqb6jtTdZX8k2rsBk+TG8Kq+1EKANM+OIXVm095fobuZvmJJg5fAdfJdQkhbrhg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jcley\\source\\repos\\UmTempoEmCasaReactC\\UmTempoEmCasaReactC.csproj",
+  "projectFilePath": "C:\\Users\\jcley\\Desktop\\UmTempoEmCasa_React_C-\\UmTempoEmCasaReactC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jcley\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\jcley\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

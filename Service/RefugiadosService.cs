@@ -14,11 +14,7 @@ namespace UmTempoEmCasaReactC.Service
             _context = context;
         }
 
-        public  async Task<Refugiado> GetRefugiado(int id)
-        {
-            var refugiado = await _context.refugiados.FindAsync(id);
-            return refugiado;
-        }
+       
         public async Task CreateRefugiado(Refugiado refugiado)
         {
             _context.refugiados.Add(refugiado);
@@ -50,6 +46,11 @@ namespace UmTempoEmCasaReactC.Service
                 refugiados = await GetRefugiados();
             }
             return refugiados;
+        }
+        public async Task<Refugiado> GetRefugiado(int id)
+        {
+            var refugiado = await _context.refugiados.FindAsync(id);
+            return refugiado;
         }
         public async Task UpdateRefugiado(Refugiado refugiado)
         {

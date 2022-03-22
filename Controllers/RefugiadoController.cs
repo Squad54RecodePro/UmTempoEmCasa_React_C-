@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using UmTempoEmCasaReactC.Model;
 using UmTempoEmCasaReactC.Service;
 
@@ -7,7 +6,6 @@ namespace UmTempoEmCasaReactC.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    // [Produces("application/json")] caso precise alterar o que o servidor vai retornar. XML ou JSON
     public class RefugiadoController : ControllerBase
     {
         private IRefugiadoService _refugiadoService;
@@ -47,14 +45,17 @@ namespace UmTempoEmCasaReactC.Controllers
             }
 
         }
-        [HttpGet("{id}:int", Name = "GetRefugiado")]
+        [HttpGet("{id:int}", Name = "GetRefugiado")]
         public async Task<ActionResult<Refugiado>> GetRefugiado(int id)
         {
             try
             {
                 var refugiado = await _refugiadoService.GetRefugiado(id);
                 if (refugiado == null)
+                {
                     return NotFound($"Não existe aluno com o id: {id} ");
+                }
+                    
                 return Ok(refugiado);
             }
             catch
@@ -62,7 +63,7 @@ namespace UmTempoEmCasaReactC.Controllers
                 return BadRequest("Requisição Invalida");
             }
         }
-        [HttpPost]
+        [HttpPost("AdicionarRefugiado")]
         public async Task<ActionResult> Create( Refugiado refugiado)
         {
 

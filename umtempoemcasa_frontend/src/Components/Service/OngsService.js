@@ -1,6 +1,8 @@
 import React from 'react'
+import axios from 'axios'
+import { Container, Paper, Button } from '@material-ui/core';
 
-class OngsService extends React.Component() {
+class OngsService extends React.Component {
     state = {
         ongs: []
     }
@@ -13,8 +15,7 @@ class OngsService extends React.Component() {
     }
     componentDidUpdate(){
         this.componentDidMount();
-    }
-
+    }s
     deleteOng(id){
         if(window.confirm('Deseja excluir o Cadastro?')){
             fetch('https://localhost:44351/api/Ongs/' + id, {
@@ -25,8 +26,6 @@ class OngsService extends React.Component() {
             })
         }
     }
-
-
 
 render() {
     

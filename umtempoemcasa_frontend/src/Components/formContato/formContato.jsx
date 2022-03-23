@@ -1,7 +1,10 @@
-import React, { Component } from 'react'
 import './style.css'
+import React from 'react';
+import TextField from '@material-ui/core/TextField';
+import { Container, Paper, Button } from '@material-ui/core';
+import { NavLink } from 'reactstrap';
 
-class formContato extends Component {
+class formContato extends React.Component {
     state = {
         id: 0,
         nome: '',
@@ -12,17 +15,17 @@ class formContato extends Component {
     cadastrar = (e) => {
 
         e.preventDefault()
-        const refugiado = this.state
-        console.log(refugiado)
+        const contato = this.state
+        console.log(contato)
         fetch("https://localhost:44351/api/Contatos", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(refugiado)
+            body: JSON.stringify(contato)
 
         }).then(() => {
-            console.log("Novo refugiado Adicionado")
+            console.log("Novo Contato Adicionado")
 
-            window.alert("Cadastro realizado com Sucesso!")
+            window.alert("Contato realizado com Sucesso!")
 
         })
 
@@ -37,7 +40,7 @@ class formContato extends Component {
 
             <Container>
                 <Paper elevation={3} className="margintop">
-                    <h3>Cadastro de refugiado</h3>
+                    <h3>Cadastro de contato</h3>
 
                     <form id='desingcadastro' className='form-control' noValidate autoComplete="off">
 
@@ -67,8 +70,8 @@ class formContato extends Component {
                             Cadastrar
                         </Button>
                     </form>
-                    <NavLink href="/buscar-refugiado"><Button variant="contained" color="primary">
-                        Consultar refugiado
+                    <NavLink href="/buscar-contato"><Button variant="contained" color="primary">
+                        Consultar contato
                     </Button>
                     </NavLink>
 

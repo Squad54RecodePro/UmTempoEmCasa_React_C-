@@ -1,6 +1,8 @@
 import React from 'react'
+import axios from 'axios'
+import { Container, Paper, Button } from '@material-ui/core';
 
-class ContatoService extends React.Component() {
+class ContatoService extends React.Component {
     state = {
         contatos: []
     }
@@ -27,8 +29,6 @@ class ContatoService extends React.Component() {
             })
         }
     }
-
-
 
     render() {
 

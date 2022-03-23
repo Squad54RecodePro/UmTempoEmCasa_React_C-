@@ -1,6 +1,8 @@
 import React from 'react'
+import axios from 'axios'
+import { Container, Paper, Button } from '@material-ui/core';
 
-class AnfitriaoService extends React.Component() {
+class AnfitriaoService extends React.Component {
     state = {
         anfitrioes: []
     }
@@ -27,8 +29,6 @@ class AnfitriaoService extends React.Component() {
             })
         }
     }
-
-
 
     render() {
 

@@ -14,6 +14,12 @@ import Refugiado from './Components/Pages/Refugiado';
 import Ongs from './Components/Pages/Ongs';
 import Footer from './Components/footer/Footer';
 import RefugiadoService from './Components/Service/RefugiadoService';
+import ContatoService from './Components/Service/ContatoService';
+import ImovelService from './Components/Service/ImovelService';
+import OngsService from './Components/Service/OngsService';
+import ReservaService from './Components/Service/ReservaService';
+import AnfitriaoService from './Components/Service/AnfitriaoService';
+import AnuncioService from './Components/Service/AnuncioService';
 
 
 function App() {
@@ -31,6 +37,12 @@ function App() {
         <Route path='/ongs' element={<Ongs />} />
         <Route path='/contato' element={<Contato />} />
         <Route path='/buscar-refugiado' element={<RefugiadoService />} />
+        <Route path='/buscar-contato' element={<ContatoService />} />
+        <Route path='/buscar-imovel' element={<ImovelService />} />
+        <Route path='/buscar-ong' element={<OngsService />} />
+        <Route path='/buscar-reserva' element={<ReservaService />} />
+        <Route path='/buscar-anfitriao' element={<AnfitriaoService />} />
+        <Route path='/buscar-anuncio' element={<AnuncioService />} />
 
         </Routes>
         <Footer />

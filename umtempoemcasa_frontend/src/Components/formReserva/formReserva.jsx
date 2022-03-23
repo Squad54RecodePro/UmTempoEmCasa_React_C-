@@ -1,8 +1,13 @@
-import React, { Component } from 'react'
 import './style.css'
+import React from 'react';
+import TextField from '@material-ui/core/TextField';
+import { Container, Paper, Button } from '@material-ui/core';
+import { NavLink } from 'reactstrap';
 
-class formReserva extends Component {
+class formReserva extends React.Component {
+
     state = {
+        id: 0,
         nome:'',
         nascimento:'',
         cpf:'',
@@ -10,63 +15,92 @@ class formReserva extends Component {
         email:'',
         endereco:'',
         cep:'',
-        senha:''
-    }
+        senha:'' 
+}
+cadastrar = (e) => {
 
-     cadastrarRefugiado = (e) => {
+    e.preventDefault()
+    const reserva = this.state
+    console.log(reserva)
+    fetch("https://localhost:44351/api/Reservas", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(reserva)
 
-        e.preventDefault()
-        const refugiado = this.state
-        console.log(refugiado)
-        fetch('https://localhost:44351/api/Reservas', {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(refugiado)
+    }).then(() => {
+        console.log("Nova Reserva Adicionada")
+        
+window.alert("Cadastro realizado com Sucesso!")
 
-        }).then(() => {
-            console.log("Nova Reserva Adicionada")
-            window.alert("Cadastro realizado com Sucesso!")
+    })
+}
 
-        })
-    }
-    render() {
-        return (
-            <div className='container formBody'>
-                <div className='textMenu'>
-                    <h1>Faça sua reserva</h1>
-                </div>
-                <div className='container textForm'>
-                    <div className='row'>
-                        <div className='col-md-6 offset-md-3'>
-                            <label className='form-label'>Nome do Refugiado :</label>
-                            <input type="text" className="form-control" disabled="disabled"></input>
-                            <br />
-                            <label className='form-label'>Nome do Anúncio :</label>
-                            <input type="text" className="form-control" disabled="disabled"></input>
-                            <br/>
-                            <label className='form-label'>Nome :</label>
-                            <input type="text" className="form-control" placeholder='Insira seu nome *'></input>
-                            <br/>
-                            <label className='form-label'>Data início :</label>
-                            <input type="date" className="form-control"></input>
-                            <br/>
-                            <label className='form-label'>Data final :</label>
-                            <input type="date" className="form-control"></input>
-            
-                           </div>
+render() {
+    
+    return (
+
+        <Container>
+            <Paper elevation={3}  className="margintop">
+                <h3>Cadastro de reserva</h3>
+
+                <form id='desingcadastro' className='form-control' noValidate autoComplete="off">
+
+                    <div>
+                        <TextField id="outlined-basic" label="Nome" variant="outlined" fullWidth
+                            onChange={(e) => this.setState({ nome: e.target.value })}
+                        />
                     </div>
-                    <div className='alignButtons'>
-                    <button className='btn btn-success btnCadastrar'>Cadastrar</button>
-                    <button className='btn btn-danger btnCancelar' href="/">Cancelar</button>
+                    <div>
+                        <TextField id="outlined-basic" label="Nascimento" variant="outlined" fullWidth
+                            onChange={(e) => this.setState({ nascimento: e.target.value })}
+                        />
                     </div>
+                    <div>
+                        <TextField id="outlined-basic" label="CPF" variant="outlined" fullWidth
+                            onChange={(e) => this.setState({ cpf: e.target.value })}
+                        />
+                    </div>
+                    <div>
+                        <TextField id="outlined-basic" label="Telefone" variant="outlined" fullWidth
+                            onChange={(e) => this.setState({ telefone: e.target.value })}
+                        />
+                    </div>
+                    <div>
+                        <TextField id="outlined-basic" label="E-mail" variant="outlined" fullWidth
 
-                </div>
+                            onChange={(e) => this.setState({ email: e.target.value })}
+                        />
+                    </div>
+                    <div>
+                        <TextField id="outlined-basic" label="Endereço" variant="outlined" fullWidth
 
-            </div>
+                            onChange={(e) => this.setState({ endereco: e.target.value })}
+                        />
+                    </div>
+                    <div>
+                        <TextField id="outlined-basic" label="CEP" variant="outlined" fullWidth
 
+                            onChange={(e) => this.setState({ cep: e.target.value })}
+                        />
+                    </div>
+                    <div>
+                        <TextField id="outlined-basic" label="Senha" variant="outlined" fullWidth
 
-        )
-    }
+                            onChange={(e) => this.setState({ senha: e.target.value })}
+                        />
+                    </div>
+                    <Button variant="contained" color="secondary" onClick={this.cadastrar} >
+                        Cadastrar
+                    </Button>
+                </form>
+                <NavLink href="/buscar-reserva"><Button variant="contained" color="primary">
+                    Consultar reserva
+                </Button>
+                </NavLink>
+
+            </Paper>
+        </Container>
+    )}
 }
 
 export default formReserva

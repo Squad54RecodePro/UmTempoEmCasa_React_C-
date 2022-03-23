@@ -1,6 +1,8 @@
 import React from 'react'
+import axios from 'axios'
+import { Container, Paper, Button } from '@material-ui/core';
 
-class ImovelService extends React.Component() {
+class ImovelService extends React.Component {
     state = {
         imoveis: []
     }
@@ -27,8 +29,6 @@ class ImovelService extends React.Component() {
             })
         }
     }
-
-
 
     render() {
 

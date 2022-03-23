@@ -1,8 +1,11 @@
 import React from 'react'
+import FormAnfitriao from '../formAnfitriao/formAnfitriao';
 
 function Anfitriao() {
   return (
-    <div>Anfitriao</div>
+    <div className='row'>
+      <FormAnfitriao/>
+      </ div>
   )
 }
 

@@ -1,70 +1,88 @@
-import React, { Component } from 'react'
 import './style.css'
+import React from 'react';
+import TextField from '@material-ui/core/TextField';
+import { Container, Paper, Button } from '@material-ui/core';
+import { NavLink } from 'reactstrap';
 
-class formOngs extends Component {
+class formOngs extends React.Component {
+
     state = {
+        id: 0,
         nome:'',
         cnpj:'',
         endereco:'',
         telefone:'',
-        email:'',
-    }
+        email:''
+}
+cadastrar = (e) => {
 
-     cadastrarOngs = (e) => {
+    e.preventDefault()
+    const ong = this.state
+    console.log(ong)
+    fetch('https://localhost:44351/api/Ongs', {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(ong)
 
-        e.preventDefault()
-        const ongs = this.state
-        console.log(ongs)
-        fetch('https://localhost:44351/api/Ongs', {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(ongs)
+    }).then(() => {
+        console.log("Nova Ong Adicionada")
+        
+window.alert("Cadastro realizado com Sucesso!")
 
-        }).then(() => {
-            console.log("Nova Ong Adicionada")
-            window.alert("Cadastro realizado com Sucesso!")
+    })
+}
 
-        })
-    }
+render() {
 
-    render() {
-        return (
-            <div className='container formBody'>
-                <div className='textMenu'>
-                    <h1>Cadastre sua ONG</h1>
-                </div>
-                <div className='container textForm'>
-                    <div className='row'>
-                        <div className='col-md-6 offset-md-3'>
-                            <label className='form-label'>Nome :</label>
-                            <input type="text" className="form-control" placeholder='Insira seu nome *' onChange={(e) => this.setState({nome: e.target.value})}></input>
-                            <br />
-                            <label className='form-label'>CNPJ :</label>
-                            <input type="text" className="form-control" placeholder='Insira seu CNPJ *' onChange={(e) => this.setState({cnpj: e.target.value})}></input>
-                            <br/>
-                            <label className='form-label'>Endereço :</label>
-                            <input type="text" className="form-control" placeholder='Insira seu endereço *' onChange={(e) => this.setState({endereco: e.target.value})}></input>
-                            <br/>
-                            <label className='form-label'>Telefone :</label>
-                            <input type="text" className="form-control" placeholder='Insira seu CEP *' onChange={(e) => this.setState({telefone: e.target.value})}></input>
-                            <br/>
-                            <label className='form-label'>Email :</label>
-                            <input type="email" className="form-control" placeholder='Insira seu e-mail *' onChange={(e) => this.setState({email: e.target.value})}></input>
-            
-                           </div>
+    return (
+
+        <Container>
+            <Paper elevation={3}  className="margintop">
+                <h3>Cadastro de ong</h3>
+
+                <form id='desingcadastro' className='form-control' noValidate autoComplete="off">
+
+                    <div>
+                        <TextField id="outlined-basic" label="Nome" variant="outlined" fullWidth
+                            onChange={(e) => this.setState({ nome: e.target.value })}
+                        />
                     </div>
-                    <div className='alignButtons'>
-                    <button className='btn btn-success btnCadastrar' onClick={this.cadastrarOngs}>Cadastrar</button>
-                    <button className='btn btn-danger btnCancelar' href="/">Cancelar</button>
+                    <div>
+                        <TextField id="outlined-basic" label="CNPJ" variant="outlined" fullWidth
+                            onChange={(e) => this.setState({ cnpj: e.target.value })}
+                        />
                     </div>
-                    
-                </div>
+                    <div>
+                        <TextField id="outlined-basic" label="Endereço" variant="outlined" fullWidth
 
-            </div>
+                            onChange={(e) => this.setState({ endereco: e.target.value })}
 
+                        />
+                    </div>
+                    <div>
+                        <TextField id="outlined-basic" label="Telefone" variant="outlined" fullWidth
+                            onChange={(e) => this.setState({ telefone: e.target.value })}
+                        />
+                    </div>
+                    <div>
+                        <TextField id="outlined-basic" label="E-mail" variant="outlined" fullWidth
 
-        )
-    }
+                            onChange={(e) => this.setState({ email: e.target.value })}
+                        />
+                    </div>
+                
+                    <Button variant="contained" color="secondary" onClick={this.cadastrar} >
+                        Cadastrar
+                    </Button>
+                </form>
+                <NavLink href="/buscar-ong"><Button variant="contained" color="primary">
+                    Consultar ong
+                </Button>
+                </NavLink>
+
+            </Paper>
+        </Container>
+    )}
 }
 
 export default formOngs

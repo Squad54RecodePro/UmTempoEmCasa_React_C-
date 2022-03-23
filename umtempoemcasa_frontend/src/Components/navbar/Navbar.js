@@ -35,7 +35,12 @@ function NavTeste() {
                             <Link to="Refugiado" className='navbar-logo'>
                             <a className="nav-link text-dark" href='./Refugiado'>Refugiado</a>
                             </Link>  
-                        </li>                      
+                        </li>     
+                        <li className="nav-item">  
+                            <Link to="Anfitriao" className='navbar-logo'>
+                            <a className="nav-link text-dark" href='./Anfitriao'>Anfitrião</a>
+                            </Link>  
+                        </li>                   
                         <li className="nav-item">
                             <Link to="Ongs" className='navbar-logo'>
                             <a className="nav-link text-dark" href='./Ongs'>ONGS</a>

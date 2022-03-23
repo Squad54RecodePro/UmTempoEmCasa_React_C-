@@ -1,0 +1,38 @@
+.formBody{
+    background-color: #FF6C27;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em; 
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.384), inset 0 0 0.2em rgba(0, 0, 0, 0.603);
+}
+.textMenu h1, h4{
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+
+.textForm{
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.formBody a{
+    color:rgb(0, 0, 124);
+    text-decoration: none;
+    font-size: 15pt;
+    text-shadow: 0 0 0 ;
+}
+
+.form-control:focus {
+    border-color: red;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 69, 0, 25);
+}
+
+.btnEnviar{
+    margin-bottom: 30px;
+}
+
+.btnCancelar{
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+    

@@ -1,6 +1,8 @@
 import React from 'react'
+import axios from 'axios'
+import { Container, Paper, Button } from '@material-ui/core';
 
-class AnuncioService extends React.Component() {
+class AnuncioService extends React.Component {
     state = {
         anuncios: []
     }
@@ -27,8 +29,6 @@ class AnuncioService extends React.Component() {
             })
         }
     }
-
-
 
     render() {
 

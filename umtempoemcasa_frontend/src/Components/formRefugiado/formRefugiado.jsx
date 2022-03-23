@@ -4,8 +4,6 @@ import TextField from '@material-ui/core/TextField';
 import { Container, Paper, Button } from '@material-ui/core';
 import { NavLink } from 'reactstrap';
 
-
-
 class formRefugiado extends React.Component {
 
     state = {
@@ -30,19 +28,15 @@ cadastrar = (e) => {
         body: JSON.stringify(refugiado)
 
     }).then(() => {
-        console.log("Novo refugiado Adicionado")
+        console.log("Novo Refugiado Adicionado")
         
 window.alert("Cadastro realizado com Sucesso!")
 
     })
-
-
 }
-
 
 render() {
     
-
     return (
 
         <Container>
@@ -67,7 +61,7 @@ render() {
                         />
                     </div>
                     <div>
-                        <TextField id="outlined-basic" label="Telefoner" variant="outlined" fullWidth
+                        <TextField id="outlined-basic" label="Telefone" variant="outlined" fullWidth
                             onChange={(e) => this.setState({ telefone: e.target.value })}
                         />
                     </div>

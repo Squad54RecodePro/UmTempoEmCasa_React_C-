@@ -33,8 +33,6 @@ class RefugiadoService extends React.Component {
         }
       }
 
-
-
 render() {
 
         const paperStyle = { padding: '50px 20px', width: 600, margin: "20px auto" }

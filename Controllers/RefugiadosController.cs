@@ -69,7 +69,7 @@ namespace UmTempoEmCasaReactC.Controllers
                 return BadRequest("Requisição Inválida");
             }
         }
-        [HttpPost]
+        [HttpPost("/salvar")]
         public async Task<ActionResult> Create(Refugiado refugiado)
         {
 

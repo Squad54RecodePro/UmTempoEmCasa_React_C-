@@ -1,0 +1,19 @@
+.row {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.img-square-wrapper :hover {
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #9e9e9e;
+    filter: brightness(70%);
+}
+
+.card-body, .card, .row {
+    border: none;
+}
+
+.card-title {
+    text-align: center;
+}

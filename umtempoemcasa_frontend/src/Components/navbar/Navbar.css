@@ -1,0 +1,30 @@
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    padding-left: 70px;
+    font-size: 30px !important;
+}
+
+a {
+    color: #070707;
+}
+
+li a:hover {
+    margin-top: -5px;
+}
+
+li a:hover:after {
+    transform: scaleY(1);
+    font-size: 30px;
+ }
+
+
+.navbar-logo {
+    justify-self: start;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+

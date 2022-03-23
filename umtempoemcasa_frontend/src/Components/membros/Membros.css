@@ -1,0 +1,29 @@
+#equipe img {
+    margin-top: -50px;
+}
+
+.cards{
+    background-color: #ff6b2748;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 500px;
+}
+
+#equipe .card {
+    border-radius: 0%;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+}
+
+    #equipe .card:hover {
+        background: #FF6C27;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 5px 5px 10px #9e9e9e;
+    }
+
+        #equipe .card:hover h3, #equipe .card:hover i {
+            color: #fff;
+        }
